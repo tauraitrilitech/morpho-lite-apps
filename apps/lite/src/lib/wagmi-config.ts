@@ -6,6 +6,7 @@ import {
   arbitrum,
   base,
   corn,
+  etherlink,
   fraxtal,
   hemi,
   ink,
@@ -79,6 +80,7 @@ const chains = [
   // full support
   mainnet,
   base,
+  // etherlink, 
   polygon,
   unichain,
   customChains.katana,
@@ -129,6 +131,11 @@ const transports: { [K in (typeof chains)[number]["id"]]: Transport } & { [k: nu
     { url: "https://op-pokt.nodies.app", batch: { batchSize: 10 } },
     { url: "https://optimism.drpc.org", batch: false },
     { url: "https://optimism.lava.build", batch: false },
+  ]),  
+  [etherlink.id]: createFallbackTransport([
+    ...createPrivateAlchemyHttp("etherlink-mainnet"),
+    { url: "https://rpc.ankr.com/etherlink_mainnet", batch: { batchSize: 10 } },
+    { url: "https://node.mainnet.etherlink.com", batch: false },
   ]),
   [arbitrum.id]: createFallbackTransport([
     ...createPrivateAlchemyHttp("arb-mainnet"),

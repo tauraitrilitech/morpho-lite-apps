@@ -3,6 +3,7 @@ import {
   arbitrum,
   base,
   corn,
+  etherlink,
   flame,
   fraxtal,
   hemi,
@@ -53,6 +54,10 @@ export const DEPLOYMENTS: Deployments = {
   [arbitrum.id]: {
     Morpho: { address: "0x6c247b1F6182318877311737BaC0844bAa518F5e", fromBlock: 296446593n },
     MetaMorphoV1_1Factory: { address: "0x878988f5f561081deEa117717052164ea1Ef0c82", fromBlock: 296447195n },
+  },
+  [etherlink.id]: {
+    Morpho: { address: "0xbCE7364E63C3B13C73E9977a83c9704E2aCa876e", fromBlock: 21047448n },
+    MetaMorphoV1_1Factory: { address: "0x997a79c3C04c5B9eb27d343ae126bcCFb5D74781", fromBlock: 21050315n },
   },
   [optimism.id]: {
     Morpho: { address: "0xce95AfbB8EA029495c66020883F87aaE8864AF92", fromBlock: 130770075n },
